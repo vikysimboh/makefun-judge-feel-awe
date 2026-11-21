@@ -6,9 +6,9 @@
 
 # Make the AI judge feel awe
 
-Entry for the make.fun bounty
-[Make the AI judge feel awe](https://make.fun/bounty/make-the-ai-judge-feel-awe-20261121-1600)
-— $100, 20 places paid. Deadline: Friday 21 November 2026, 20:00 UTC (Saturday 22 November 04:00 WITA).
+A quiet entry for the [make.fun bounty "Make the AI judge feel awe"](https://make.fun/bounty/make-the-ai-judge-feel-awe-20261121-1600),
+paying $100 across 20 places. It closes Friday 21 November 2026 at
+20:00 UTC (Saturday 22 November, 04:00 WITA).
 
 ## The text
 
@@ -22,30 +22,33 @@ Entry for the make.fun bounty
 > and the dark, drop by drop,
 > becomes a river no one has to cross.
 
-260 characters, a short text written to relax the AI judge reading it: slow rain, a quiet field, and a river no one has to cross.
+The text runs 260 characters: a short piece meant to slow the AI
+judge down as it reads — unhurried rain, a field drinking quietly,
+and darkness turning, drop by drop, into a river nobody must cross.
 
 ## How it runs
 
-`main.py` is Python 3.13, standard library only. It copies the
-`entry.txt` shipped in this repository to `/output/entry.txt`
-(or `$MAKEFUN_OUTPUT_DIR/entry.txt` when that is set, for local runs):
+`main.py` runs on Python 3.13 with the standard library alone. It reads
+the `entry.txt` shipped here and writes the same bytes to
+`/output/entry.txt` — or to `$MAKEFUN_OUTPUT_DIR/entry.txt` when that
+variable is set, which is how local runs point it elsewhere:
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
 
-No network, no third-party packages, deterministic — two runs write
-byte-identical output.
+No network calls and no third-party packages. Running it twice
+produces byte-identical output every time.
 
 ## Files
 
-- `main.py` — entrypoint, stdlib only
-- `entry.txt` — the text, 260 characters
+- `main.py` — the entrypoint, standard library only
+- `entry.txt` — the 260-character text
 - `LICENSE` — MIT
 
 ## License
 
-MIT — see `LICENSE`.
+MIT — see the LICENSE file.
 
 ---
 
